@@ -1,6 +1,247 @@
-@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=La+Belle+Aurore|Open+Sans');
 
-:root {
-  --brightYellow:#E3B505;
-  
+
+:root{
+  --brightYellow: #E3B505;
+  --darkBrown: #BB9457;
+  --yellow:rgb(242, 180, 80);
+  --brown: #382923;
+  --black: #191919;
+  --grey: #A9B2AC;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Open Sans', 'sans-serif';
+  background: linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.85)),url('../img/bodyBcg.jpg');
+  color: var(--black);
+}
+
+/* Global Styles */
+.bell-fonts{
+  font-family: 'La Belle Aurore', cursive;
+}
+/* End - Global Styles */
+
+/* Preloader */
+.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--brightYellow);
+  z-index: 999;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header */
+.header{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 80%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media screen and (max-width:768px){
+  .header{
+    background: url('../img/headerBcg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Banner */
+.banner{
+  text-align: center;
+  z-index: 3;
+}
+
+.banner__title{
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: var(--brightYellow);
+}
+
+@media screen and (min-width:768px){
+  .banner__title{
+    font-size: 9rem;
+  }
+}
+
+.banner__social-icon{
+  display: block;
+  text-decoration: none;
+  color: var(--black);
+  border: 0.1rem solid var(--black);
+  border-radius: 50%;
+  padding: 0.25rem;
+  transition: all 0.5s linear;
+}
+
+.banner__social-icon:hover{
+  background: var(--brightYellow);
+  color: var(--black);
+}
+
+.banner__icons{
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 2rem);
+  grid-column-gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Video */
+.video__container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video__item{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Nav Button */
+.navBtn{
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  font-size: 3.5rem;
+  color: var(--yellow);
+  cursor: pointer;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: 5;
+}
+
+/* Nav Btn Animation */
+@keyframes pulse{
+  0%{
+    tranform: scale(1)
+  }
+  50%{
+    transform: scale(1.5)
+  }
+  100%{
+    transform: scale(1)
+  }
+}
+
+/* Nav */
+.nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10rem;
+  background: rgba(242,180,80,0.9);
+  z-index: 3;
+}
+
+.nav__links{
+  list-style-type: none;
+}
+
+.nav__logo{
+  padding: 0.25rem 0.25rem;
+}
+
+.nav__logo img{
+  height: 4rem;
+}
+
+.nav__links .nav__logo:hover{
+  background: var(--grey);
+  color: rgba(242,180,80,0.9);
+  padding-left: 1.5rem;
+}
+
+.nav__single-link{
+  display: block;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--brown);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav__single-link:hover{
+  background: var(--brown);
+  color: rgba(242,180,80,0.9);
+  padding-left: 1.5rem;
+}
+
+/* Nav Animation */
+.nav{
+  width: 0;
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+
+.nav--show{
+  width: 10rem;
+
+}
+
+/* Video Switch */
+.video__switch-container{
+  display: none;
+}
+
+@media screen and (min-width:768px){
+  .video__switch-container{
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    z-index: 3;
+  }
+
+  .video__switch{
+    position: relative;
+    width: 5rem;
+    background: var(--yellow);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+
+  .video__switch-btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: var(--brown);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-out;
+  }
+
+  .btnSlide{
+    left: 50%;
+  }
 }

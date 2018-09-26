@@ -1,13 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coffee Shop</title>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
 
   <body>
-    <h1>Hello World</h1>
+    <!-- Pre-Loader -->
+    <div class="preloader">
+      <img src="img/loader.gif" alt="Preloader" class="preloader__item">
+    </div>
+    <!-- End Pre-Loader -->
+    
+    <!-- Header Section -->
+    <header class="header" id="header">
+      <!-- Banner -->
+      <div class="banner">
+        <h1 class="banner__title bell-fonts">Coffee Junkie</h1>
+        <div class="banner__icons">
+          <a href="#" class="banner__social-icon">
+            <i class="fab fa-facebook fa-fw"></i>
+          </a>
+          <a href="#" class="banner__social-icon">
+            <i class="fab fa-twitter fa-fw"></i>
+          </a>
+          <a href="#" class="banner__social-icon">
+            <i class="fab fa-google-plus fa-fw"></i>
+          </a>
+          <a href="#" class="banner__social-icon">
+            <i class="fab fa-instagram fa-fw"></i>
+          </a>
+        </div>
+      </div>
+      <!-- End Banner -->
+
+      <!-- Video -->
+      <article class="video__container">
+        <video class="video__item" autoplay muted loop>
+          <source src="video/coffee.mp4" type="video/mp4">
+          <source src="video/coffee.ogv" type="video/ogv">
+          <source src="video/coffee.webm" type="video/webm">
+          Your browser does not support video tag.
+        </video>
+      </article>
+      <!-- End Video -->
+
+      <!-- Nav Button -->
+      <div class="navBtn">
+        <i class="fas fa-bars"></i>
+      </div>
+      <!-- End Nav Button -->
+
+      <!-- NavBar -->
+      <div class="nav">
+        <ul class="nav__links">
+          <!-- Logo -->
+          <li>
+            <a href="#" class="nav__single-link nav__logo">
+              <img src="img/navLogo.png" alt="Coffee Junkie Logo">
+            </a>
+        </li>
+          <li><a href="#header" class="nav__single-link">Home</a></li>
+          <li><a href="#about" class="nav__single-link">About</a></li>
+          <li><a href="#drink" class="nav__single-link">Free Drink</a></li>
+          <li><a href="#work" class="nav__single-link">Work</a></li>
+          <li><a href="#contact" class="nav__single-link">Contact</a></li>
+          <!-- End Logo -->
+        </ul>
+      </div>
+      <!-- End NavBar -->
+
+      <!-- Video Switch -->
+      <div class="video__switch-container">
+        <div class="video__switch">
+          <span>on</span>
+          <span>off</span>
+          <div class="video__switch-btn">
+
+          </div>
+        </div>
+      </div>
+      <!-- End Video Switch -->
+    </header>
+    <!-- End Header Section -->
+
+    <script src="js/app.js"></script>
   </body>
 
   <footer>
   </footer>
+
 </html>
