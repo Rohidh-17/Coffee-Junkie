@@ -1,4 +1,4 @@
-# Coffee-Shop
+# Coffee-Junkie
 
 <b>PROBLEM:</b><br>
 The local coffee shop seeks to increase customers coming to the shop and using a website to promote sales.
@@ -19,4 +19,4 @@ using JavaScript eventListeners.
 <b>Description:</b><br>
 Responsive HTML, CSS, JavaScript theme for a local coffee shop.
 
-Demo - https://rockynhatnguyen.github.io/coffeeshop/
+Demo - https://rockynhatnguyen.github.io/Coffee-Junkie/
